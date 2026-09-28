@@ -8,7 +8,7 @@ d="$start"
 total=0
 
 while [[ "$d" < "$end" || "$d" == "$end" ]]; do
-  n=$((RANDOM % 4 + 1))   # 1-4 commit per hari, biar warnanya bervariasi
+  n=20   # 20 commit per hari, biar semua kotak hijau tua
   for ((i = 0; i < n; i++)); do
     t=$(printf "%sT%02d:%02d:00" "$d" $((RANDOM % 14 + 9)) $((RANDOM % 60)))
     echo "$t" >> activity.log
